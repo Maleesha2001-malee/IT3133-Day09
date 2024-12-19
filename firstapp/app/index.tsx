@@ -1,4 +1,4 @@
-import { Text, View,Image } from "react-native";
+import { Text, View,Image,StyleSheet } from "react-native";
 
 export default function Index() {
   return (
@@ -9,9 +9,18 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Image source={require("../assets/images/react-logo.png")}></Image>
+      <Image source={require("../assets/images/react-logo.png")} style={styles.logo}></Image>
       <Text>Hello World!</Text>
       <Text>My First ReactNamtive cross platform app</Text>
     </View>
   );
 }
+
+const styles=StyleSheet.create({
+  logo:{
+  width:100,
+  height:100,
+  borderColor:'solid',
+  borderWidth:2
+  }
+})
